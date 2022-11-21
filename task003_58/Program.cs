@@ -27,7 +27,7 @@ int[,] array1 = new int[n1, m1];
 int[,] array2 = new int[n2, m2];
 int[,] result = new int[n1, m2];
 Random rand = new Random();
-Console.WriteLine("Ìàòðèöà 1:");
+Console.WriteLine("Matrix 1:");
 for(int i = 0; i < n1; ++i)
 {
 for(int j = 0; j < m1; ++j)
@@ -37,7 +37,7 @@ Console.Write(array1[i,j] + "\t");
 }
 Console.WriteLine();
 }
-Console.WriteLine("Ìàòðèöà 2:");
+Console.WriteLine("Matrix 2:");
 for(int i = 0; i < n2; ++i)
 {
 for(int j = 0; j < m2; ++j)
@@ -47,7 +47,7 @@ Console.Write(array2[i,j] + "\t");
 }
 Console.WriteLine();
 }
-Console.WriteLine("Ðåçóëüòèðóþùàÿ ìàòðèöà:");
+Console.WriteLine("Resul matrix:");
 for (int i = 0; i < n1; i++)
 {
 for (int j = 0; j < m2; j++)

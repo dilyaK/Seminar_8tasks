@@ -7,11 +7,11 @@
 // 26(1,0,1) 55(1,1,1)
 
 int n, m, o;
-Console.WriteLine("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ïî Ox");
+Console.WriteLine("Axle size Ox");
 n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ïî Oy");
+Console.WriteLine("Axle size Oy");
 m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ïî Oz");
+Console.WriteLine("Axle size Oz");
 o = Convert.ToInt32(Console.ReadLine());
 int[,,] array = new int[n,m,o];
 Random rand = new Random();
