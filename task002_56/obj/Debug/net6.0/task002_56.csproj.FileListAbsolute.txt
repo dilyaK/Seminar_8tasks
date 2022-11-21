@@ -1,0 +1,15 @@
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\bin\Debug\net6.0\task002_56.exe
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\bin\Debug\net6.0\task002_56.deps.json
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\bin\Debug\net6.0\task002_56.runtimeconfig.json
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\bin\Debug\net6.0\task002_56.dll
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\bin\Debug\net6.0\task002_56.pdb
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.csproj.AssemblyReference.cache
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.AssemblyInfoInputs.cache
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.AssemblyInfo.cs
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.csproj.CoreCompileInputs.cache
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.dll
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\refint\task002_56.dll
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.pdb
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\task002_56.genruntimeconfig.cache
+C:\Users\Munar\OneDrive\Desktop\GBC#\Seminar_8tasks\task002_56\obj\Debug\net6.0\ref\task002_56.dll
