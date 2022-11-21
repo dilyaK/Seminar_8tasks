@@ -7,74 +7,56 @@
 // 18 20
 // 15 18
 
-void RandomMatrix(int[,] mass)
+int n1 = 0, m1 = -1, n2 = 0, m2 = 0;;
+while(m1 != n2)
 {
-    for (int i = 0; i < mass.GetLength(0); i++)
-    {
-        for (int j = 0; j < mass.GetLength(1); j++)
-        {
-            mass[i, j] = new Random().Next(1,10);
-        }
-    }
-}
-
-void PrintMatrix(int[,] mass)
+Console.Write("Enter N1: ");
+n1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter M1: ");
+m1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter N2: ");
+n2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter M2: ");
+m2 = Convert.ToInt32(Console.ReadLine());
+if(m1 != n2)
 {
-    for (int i = 0; i < mass.GetLength(0); i++)
-    {
-        for (int j = 0; j < mass.GetLength(1); j++)
-        {
-            Console.Write("{0,6:F1}", mass[i, j]);
-        }
-        Console.WriteLine();
-    }
+Console.WriteLine("M1 should be equal to N2");
 }
-
-int[,] DivMatrix(int[,] matrix1, int[,] matrix2)
+}
+int[,] array1 = new int[n1, m1];
+int[,] array2 = new int[n2, m2];
+int[,] result = new int[n1, m2];
+Random rand = new Random();
+Console.WriteLine("Ìàòðèöà 1:");
+for(int i = 0; i < n1; ++i)
 {
-    var matrix3 = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
-    if (matrix1.GetLength(1) == matrix2.GetLength(0))
-    {
-        for (int i = 0; i < matrix3.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix3.GetLength(1); j++)
-            {
-                matrix3[i, j] = 0;
-                for (int n = 0; n < matrix1.GetLength(1); n++)
-                {
-                    matrix3[i, j] += matrix1[i, n] * matrix2[n, j];
-                }
-            }
-        }
-    }
-    return matrix3;
-}
-
-Console.WriteLine("Введите количество строк матрицы A (m): ");
-int m = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите количество столбцов матрицы A (n1): ");
-int n1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите количество строк матрицы B (n2): ");
-int n2 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите количество столбцов матрицы B (k): ");
-int k = Convert.ToInt32(Console.ReadLine());
-
-int[,] A = new int[m,n1];
-int[,] B = new int[n2,k];
-
-if(n1!=n2) Console.Write("Умножить матрицы невозможно, число столбцов матрицы A должно быть равно числу строк матрицы B");
-else
+for(int j = 0; j < m1; ++j)
 {
-    RandomMatrix(A);
-    RandomMatrix(B);
-    Console.WriteLine("Матрица A:");
-    PrintMatrix(A);
-     Console.WriteLine("Матрица B:");
-    PrintMatrix(B);
-    Console.WriteLine("Матрица произведение матриц:");
-    PrintMatrix(DivMatrix(A,B));
+array1[i,j] = rand.Next(1, 21);
+Console.Write(array1[i,j] + "\t");
 }
-
+Console.WriteLine();
+}
+Console.WriteLine("Ìàòðèöà 2:");
+for(int i = 0; i < n2; ++i)
+{
+for(int j = 0; j < m2; ++j)
+{
+array2[i,j] = rand.Next(1, 21);
+Console.Write(array2[i,j] + "\t");
+}
+Console.WriteLine();
+}
+Console.WriteLine("Ðåçóëüòèðóþùàÿ ìàòðèöà:");
+for (int i = 0; i < n1; i++)
+{
+for (int j = 0; j < m2; j++)
+{
+for (int k = 0; k < n2; k++)
+{
+result[i,j] += array1[i,k] * array2[k,j];
+}
+Console.Write(result[i,j] + "\t");
+}
+Console.WriteLine();
+}

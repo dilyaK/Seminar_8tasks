@@ -6,77 +6,24 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-
-void RandomCube(int[,,] mass, int[] mas)
+int n, m, o;
+Console.WriteLine("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ïî Ox");
+n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ïî Oy");
+m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ïî Oz");
+o = Convert.ToInt32(Console.ReadLine());
+int[,,] array = new int[n,m,o];
+Random rand = new Random();
+for(int i =0; i < array.GetLength(0); ++i)
 {
-    int l=0;
-    for (int i = 0; i < mass.GetLength(0); i++)
-    {
-        for (int j = 0; j < mass.GetLength(1); j++)
-        {
-            for (int k = 0; k < mass.GetLength(2); k++)
-            {
-                mass[i, j, k] = mas[l];
-                l++;
-            }
-        }
-    }
-}
-
-void PrintCube(int[,,] mass)
+for(int j =0; j < array.GetLength(1); ++j)
 {
-    for (int i = 0; i < mass.GetLength(0); i++)
-    {
-        for (int j = 0; j < mass.GetLength(1); j++)
-        {
-            for (int k = 0; k < mass.GetLength(2); k++)
-            {
-                Console.Write($"{mass[i, j, k]} ({i},{j},{k}) ");
-            }
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
-
-int[] Generator(int m3)
+for(int k =0; k < array.GetLength(2); ++k)
 {
-    Random rnd = new Random();
-    int[] a = new int[m3];
-    a[0] = rnd.Next(10, 100);
-    for (int i = 1; i < a.Length;)
-    {
-        int num = rnd.Next(10, 100); // генерируем элемент
-        int j;
-        // поиск совпадения среди заполненных элементов
-        for (j = 0; j < i; j++)
-        {
-            if (num == a[j])
-                break; // совпадение найдено, элемент не подходит
-        }
-        if (j == i)
-        { // совпадение не найдено
-            a[i] = num; // сохраняем элемент
-            i++; // переходим к следующему элементу
-        }
-    }
-    return a;
+array[i, j, k] = rand.Next(1, 21);
+Console.Write(array[i, j, k] + string.Format("({0},{1},{2}) ", i, j, k));
 }
-
-Console.WriteLine("Введите длину куба (n): ");
-int n = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите ширину куба (n): ");
-int m = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите высоту куба (l): ");
-int l = Convert.ToInt32(Console.ReadLine());
-
-int[,,] Cube = new int[n, m, l];
-int vol=n*m*l;
-if(vol<91)
-{
-RandomCube(Cube, Generator(vol));
-PrintCube(Cube);
+Console.WriteLine();
 }
-else Console.WriteLine("Количество элементов позиций матрицы превышает количесво двузначных элементов");
+}
